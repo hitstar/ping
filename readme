@@ -1,3 +1,6 @@
-fucker, this is the a ping command in python
+hey man , this is the a ping command in python
 icmp is the base of the command
 ip protocol of the udp is the most important part
+
+if u r still not familiar udp and icmp protocol
+read rfc 792  and udp protocol first
