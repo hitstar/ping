@@ -75,7 +75,7 @@ def ping(number = sys.maxint, node = None, size = icmp_data_size):
         perror('can not ping network')
 
     if number == 0:
-        perror('have not packet to transmit: %s' %)
+        perror('have not packet to transmit')
 
     print 'ping %s (%s): %d data bytes' %(str(node), str(host), 28 + size)
     
@@ -160,7 +160,7 @@ def help():
 
 if __name__ == "__main__":
     version = str(sys.version[:3]).split('.')
-    if map(int, version) <[2, 3]):
+    if map(int, version) <[2, 3]:
         perror("u should update ur python to 2.3 at lease")
 
     try:
@@ -170,12 +170,12 @@ if __name__ == "__main__":
         perror("illegal options" + str(e))
 
     if len(sys.argv) >= 2:
-        node = sys,argv[-1:][0]
+        node = sys.argv[-1:][0]
 
         if node[0] == '-' or node == '-h' or node == '--help':
             help()
     else:
-        perror( len(sys.argv),'is given, but too less')
+        perror( str(len(sys.argv))+'is given, but too less')
 
     size = icmp_data_size
     timeout = 1
